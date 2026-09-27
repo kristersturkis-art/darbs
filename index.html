@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktforma ar validāciju</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Sazinies ar mums</h2>
+    
+    <div id="successMessage" class="success-message" hidden>
+      Paldies! Jūsu ziņojums ir veiksmīgi nosūtīts.
+    </div>
+
+    <form id="contactForm" novalidate>
+      <!-- Vārda lauks -->
+      <div class="form-group">
+        <label for="name">Vārds:</label>
+        <input type="text" id="name" name="name" placeholder="Jānis Bērziņš">
+        <small class="error-text" id="nameError"></small>
+      </div>
+
+      <!-- E-pasta lauks -->
+      <div class="form-group">
+        <label for="email">E-pasts:</label>
+        <input type="email" id="email" name="email" placeholder="janis@piemers.lv">
+        <small class="error-text" id="emailError"></small>
+      </div>
+
+      <!-- Ziņojuma lauks -->
+      <div class="form-group">
+        <label for="message">Ziņojums:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ierakstiet savu ziņu šeit..."></textarea>
+        <small class="error-text" id="messageError"></small>
+      </div>
+
+      <button type="submit" id="submitBtn">Nosūtīt</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
